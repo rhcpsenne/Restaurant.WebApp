@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Order App</title>
+    <script type="text/javascript" src="Scripts/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="Scripts/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Scripts/css/index.css">
+    <script type="text/javascript" src="Scripts/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <link href="Scripts/Data-Grid-Plugin-Bootstrap-jQuery-Bootgrid/dist/jquery.bootgrid.css" rel="stylesheet">
+    <script src="Scripts/Data-Grid-Plugin-Bootstrap-jQuery-Bootgrid/dist/jquery.bootgrid.js"></script>
+    <script type="text/javascript" src="Scripts/js/Constants.js"></script>
+    <script type="text/javascript" src="Scripts/js/index/Orders.js"></script>
+    <script type="text/javascript" src="Scripts/js/index/ListOrders.js"></script>
+</head>
+
+<body>
+    <nav nav class="navbar navbar-light">
+        <a href="#" class="navbar-brand">Restaurant Order App</a>
+    </nav>
+    <div class="container my-container">
+        <div class="col-sm-6 my-sm">
+            <form id="formOrder">
+                <div class="form-group">
+                    <label for="txtOrder">Order:</label>
+                    <input type="text" class="form-control" id="txtOrder" aria-describedby="orderHelp"
+                        placeholder="Enter order">
+                    <small id="orderHelp" class="form-text text-muted">Exemple: morning, 1, 2, 3</small>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container my-table-container">
+        <table id="grid" class="table table-condensed table-hover table-striped" data-toggle="bootgrid">
+            <thead>
+                <tr>
+                    <th data-column-id="id" data-identifier="true" data-type="numeric" data-order="asc">Number</th>
+                    <th data-column-id="orderDescription" data-order="asc">Description</th>
+                    <th data-column-id="orderDate" data-order="asc">Date/Time</th>
+                </tr>
+            </thead>
+        </table>
+
+    </div>
+</body>
+
+</html>
